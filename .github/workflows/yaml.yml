@@ -15,12 +15,11 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       
-      - name: Archive bundle
-        uses: actions/upload-artifact@v2
+      - name: Checkout2
+      - uses: actions/upload-artifact@v3
         with:
-         name: bundle
-         path: build
-         if-no-files-found: error
+         name: my-artifact
+         path: dist/angular-example-app/
         
         
       - name: Checkout
