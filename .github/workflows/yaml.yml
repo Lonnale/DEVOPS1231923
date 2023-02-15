@@ -11,3 +11,7 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - name: Build the project
+        run: npm run build
+      - name: Run tests
+        run: npm test -- --watch=false --browsers=ChromeHeadless
