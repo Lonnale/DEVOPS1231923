@@ -22,3 +22,8 @@ jobs:
 
     - name: Run tests
       run: npm test -- --watch=false --browsers=ChromeHeadless
+      
+    - uses: actions/upload-artifact@v3
+      with:
+       name: my-artifact
+       path: ls ./dist/angular-example-app/
