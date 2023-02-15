@@ -1,4 +1,4 @@
-name: DIIBADAABA
+name: Build, Test and Deply
 
 on:
   push:
