@@ -1,14 +1,8 @@
-FROM python:2.7-alpine
+FROM nginx:1.23.3
+COPY . /usr/share/nginx/html
 
-RUN mkdir /app
-WORKDIR /app
 
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY . .
-
-LABEL maintainer="WebMagic Informatica <info@webmagicinformatica.com>" \
-      version="1.0"
-
-CMD flask run --host=0.0.0.0 --port=5000
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
