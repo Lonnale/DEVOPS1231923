@@ -14,19 +14,13 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       
-      - name: Checkout2
-        uses: actions/checkout@v1   
-      - uses: actions/upload-artifact@master
-        with:
-         name: webpack artifacts
-         path: dist/angular-example-app/
-      - run: ls ./dist/angular-example-app/
-        
+ 
         
         
       - name: Checkout
         uses: actions/checkout@v1
       - uses: actions/download-artifact@master
+      - uses: actions/upoload-artifact@master
         with:
           name: webpack artifacts
           path: dist/angular-example-app/
