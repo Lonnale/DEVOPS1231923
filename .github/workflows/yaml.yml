@@ -1,6 +1,7 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 
+
 on: [push]
 jobs:
   check-bats-version:
@@ -43,3 +44,4 @@ jobs:
           file: ./Dockerfile
 
   
+          needs: build
