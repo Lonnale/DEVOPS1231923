@@ -6,9 +6,6 @@ on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./react
         
     steps:
       - uses: actions/checkout@v3
