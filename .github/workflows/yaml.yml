@@ -20,7 +20,7 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: webpack artifacts
-        path: public/
+        path: dist/angular-example-app
         
   test: 
    runs-on: ubuntu-latest
@@ -55,7 +55,6 @@ jobs:
         with:
           name: webpack artifacts
           path: dist/angular-example-app/
-      - run: ls ./dist/angular-example-app/
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
