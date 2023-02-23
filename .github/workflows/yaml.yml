@@ -3,8 +3,7 @@ on:
   push:
 
 env: 
-  IMAGE_NAME: tic tac toe
-  AZURE_WEBAPP_NAME: tic tac toe docker
+  AZURE_WEBAPP_NAME: Docker-tiki-taka-toe
 
 
 jobs: 
